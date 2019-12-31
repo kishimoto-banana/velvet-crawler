@@ -1,7 +1,8 @@
-beautifulsoup4==4.8.2
-certifi==2019.11.28
-chardet==3.0.4
-idna==2.8
+html2text==2019.9.26
+orator==0.9.9
+python-dateutil==2.8.1
+pytz==2019.3
+readability-lxml==0.7.1
 requests==2.22.0
-soupsieve==1.9.5
-urllib3==1.25.7
+Scrapy==1.8.0
+psycopg2

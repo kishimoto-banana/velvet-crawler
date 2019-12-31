@@ -1,6 +1,6 @@
-FROM python:3.8-slim-buster
+FROM python:3.8
 
-ADD . /app
-WORKDIR /app
+ADD requirements.txt /crawler/
+WORKDIR /crawler
 
 RUN pip install -r ./requirements.txt
