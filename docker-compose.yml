@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     entrypoint: /crawler/entrypoint.sh
+    tty: true
     working_dir: /crawler
     environment:
       - DB_HOST=postgres
@@ -14,8 +15,9 @@ services:
       - DB_PASSWORD=docker
     volumes:
       - ./crawler:/crawler
-    links:
+    depends_on:
       - postgres
+    command: ["/crawler/wait-for-it.sh", "postgres_6:5432", "--", "/crawler/entrypoint.sh"]
 
   postgres:
     image: postgres:11.2
