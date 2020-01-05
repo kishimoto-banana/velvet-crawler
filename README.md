@@ -12,7 +12,7 @@
 
 １行に1つのトップページを記載したテキストファイルを作成します。例として `crawler/urls.txt.sample` を用意しているので、コピーして用途に合わせて変更してください。
 
-```
+```bash
 $ cp crawler/urls.txt.sample crawler/urls.txt
 ```
 
@@ -20,7 +20,7 @@ $ cp crawler/urls.txt.sample crawler/urls.txt
 
 docker-compose を使用して、アプリケーションを実行します。
 
-```
+```bash
 $ docker-compose up -d
 
 # フォアグラウンドで実行したい場合
@@ -31,7 +31,7 @@ $ docker-compose up
 
 psql で確認します。
 
-```
+```bash
 $ docker-compose exec postgres psql -U docker -d crawler
 
 # psql のコンソールで SQL を実行できます
