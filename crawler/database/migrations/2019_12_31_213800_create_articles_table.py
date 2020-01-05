@@ -10,9 +10,9 @@ class CreateArticlesTable(Migration):
         with self.schema.create('articles') as table:
             table.increments('id')
             table.string('domain', 255)
-            table.string('url')
-            table.string('title')
-            table.string('main_text')
+            table.text('url', 255)
+            table.text('title', 512)
+            table.text('main_text')
             table.datetime('published_at').nullable()
             table.integer('hatena_bookmark_count').unsigned()
             table.timestamps()
